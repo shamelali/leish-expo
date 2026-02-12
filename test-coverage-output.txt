@@ -1,0 +1,279 @@
+
+> leish@1.0.0 test
+> jest --coverage
+
+PASS __tests__/integration/component-store.test.ts (11.267 s)
+PASS __tests__/integration/api-store.test.ts (12.117 s)
+PASS __tests__/integration/auth-flow.test.ts (12.378 s)
+PASS __tests__/store/index.test.ts
+  ΓùÅ Console
+
+    console.error
+      Initialize auth error: Error: Storage error
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\store\index.test.ts:131:59)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      51 |       }
+      52 |     } catch (error) {
+    > 53 |       console.error('Initialize auth error:', error);
+         |               ^
+      54 |     } finally {
+      55 |       set({ isLoading: false, isInitialized: true });
+      56 |     }
+
+      at Object.error (store/index.ts:53:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+    console.error
+      Logout error: Error: Network error
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\store\index.test.ts:240:50)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      100 |       set({ user: null, token: null, isLoading: false });
+      101 |     } catch (error) {
+    > 102 |       console.error('Logout error:', error);
+          |               ^
+      103 |       set({ isLoading: false });
+      104 |     }
+      105 |   },
+
+      at Object.error (store/index.ts:102:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+PASS __tests__/components/input.test.tsx (7.584 s)
+PASS __tests__/components/card.test.tsx (7.422 s)
+PASS __tests__/hooks/use-async.test.tsx (7.164 s)
+PASS __tests__/components/button.test.tsx
+PASS __tests__/hooks/use-auth.test.tsx
+PASS __tests__/services/auth.test.ts
+  ΓùÅ Console
+
+    console.error
+      Login error: Error: Invalid credentials
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\services\auth.test.ts:48:21)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:95:5)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      19 |       return response;
+      20 |     } catch (error) {
+    > 21 |       console.error('Login error:', error);
+         |               ^
+      22 |       throw error;
+      23 |     }
+      24 |   },
+
+      at Object.error (services/auth.ts:21:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+    console.error
+      Signup error: Error: Email already exists
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\services\auth.test.ts:76:21)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:95:5)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      39 |       return response;
+      40 |     } catch (error) {
+    > 41 |       console.error('Signup error:', error);
+         |               ^
+      42 |       throw error;
+      43 |     }
+      44 |   },
+
+      at Object.error (services/auth.ts:41:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+    console.error
+      Logout API error (non-blocking): Error: Network error
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\services\auth.test.ts:95:42)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:95:5)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      48 |       await apiService.logout();
+      49 |     } catch (error) {
+    > 50 |       console.error('Logout API error (non-blocking):', error);
+         |               ^
+      51 |     } finally {
+      52 |       // Always clear local storage even if API call fails
+      53 |       await storageService.clearAuth();
+
+      at Object.error (services/auth.ts:50:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+    console.error
+      Get current user error: Error: Unauthorized
+          at Object.<anonymous> (E:\DEV\projects\leish\__tests__\services\auth.test.ts:153:50)
+          at Generator.next (<anonymous>)
+          at asyncGeneratorStep (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+          at _next (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+          at E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+          at new Promise (<anonymous>)
+          at Object.<anonymous> (E:\DEV\projects\leish\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+          at Promise.then.completed (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:298:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (E:\DEV\projects\leish\node_modules\jest-circus\build\utils.js:231:10)
+          at _callCircusTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:316:40)
+          at processTicksAndRejections (node:internal/process/task_queues:95:5)
+          at _runTest (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:252:3)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:126:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at _runTestsForDescribeBlock (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:121:9)
+          at run (E:\DEV\projects\leish\node_modules\jest-circus\build\run.js:71:3)
+          at runAndTransformResultsToJestFormat (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+          at jestAdapter (E:\DEV\projects\leish\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+          at runTestInternal (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:367:16)
+          at runTest (E:\DEV\projects\leish\node_modules\jest-runner\build\runTest.js:444:34)
+          at Object.worker (E:\DEV\projects\leish\node_modules\jest-runner\build\testWorker.js:106:12)
+
+      60 |       return response.user || null;
+      61 |     } catch (error) {
+    > 62 |       console.error('Get current user error:', error);
+         |               ^
+      63 |       return null;
+      64 |     }
+      65 |   },
+
+      at Object.error (services/auth.ts:62:15)
+          at Generator.throw (<anonymous>)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _throw (node_modules/@babel/runtime/helpers/asyncToGenerator.js:20:9)
+
+PASS __tests__/services/api.test.ts
+PASS __tests__/utils/formatting.test.ts
+----------------------|---------|----------|---------|---------|------------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
+----------------------|---------|----------|---------|---------|------------------------
+All files             |   54.72 |    46.45 |   63.01 |   55.05 |                        
+ components           |     100 |    54.54 |     100 |     100 |                        
+  themed-text.tsx     |     100 |    54.54 |     100 |     100 | 24-28                  
+  themed-view.tsx     |     100 |      100 |     100 |     100 |                        
+ components/ui        |   73.52 |    56.25 |    87.5 |   75.75 |                        
+  button.tsx          |   69.56 |    59.09 |     100 |   72.72 | 35-39,47,53-55         
+  card.tsx            |      50 |       20 |      50 |      50 | 51-67                  
+  input.tsx           |     100 |       75 |     100 |     100 | 39,46-71               
+ constants            |     100 |      100 |     100 |     100 |                        
+  theme.ts            |     100 |      100 |     100 |     100 |                        
+ hooks                |      60 |    27.27 |      80 |   59.09 |                        
+  use-async.ts        |   41.37 |    14.28 |      60 |   41.37 | 33-36,59-83            
+  use-auth.ts         |     100 |      100 |     100 |     100 |                        
+  use-color-scheme.ts |       0 |        0 |       0 |       0 |                        
+  use-theme-color.ts  |      80 |       50 |     100 |      80 | 17                     
+ services             |   38.12 |    42.85 |   35.48 |   38.12 |                        
+  api.ts              |   24.07 |       50 |   21.42 |   24.07 | 21,26,35-41,48-134,151 
+  auth.ts             |     100 |       60 |     100 |     100 | 11-34                  
+  storage.ts          |   13.46 |     12.5 |   18.18 |   13.46 | 13-17,25-64,73-118     
+ store                |     100 |       90 |     100 |     100 |                        
+  index.ts            |     100 |       90 |     100 |     100 | 71                     
+ utils                |   22.22 |    10.52 |      50 |   22.72 |                        
+  formatting.ts       |   22.22 |    10.52 |      50 |   22.72 | 2-42                   
+----------------------|---------|----------|---------|---------|------------------------
+
+Test Suites: 12 passed, 12 total
+Tests:       105 passed, 105 total
+Snapshots:   0 total
+Time:        26.398 s
+Ran all test suites.
